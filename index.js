@@ -46,7 +46,7 @@ app.get("/api/users", async (req, res) => {
   res.json(users);
 });
 
-// ✅ Route to add exercise
+//  Route to add exercise
 app.post("/api/users/:_id/exercises", async (req, res) => {
   const { description, duration, date } = req.body;
   const user = await User.findById(req.params._id);
